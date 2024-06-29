@@ -1,11 +1,9 @@
 import streamlit as st
 import textwrap
 import google.generativeai as genai
+import config  # Import the config module
 
-# Set your API key directly (remove this in production)
-GOOGLE_API_KEY = 'AIzaSyBOqOhnxxbmmSmfDeBVpuVVYWrmrliRtxo'
-
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=config.GOOGLE_API_KEY)
 
 model = genai.GenerativeModel('gemini-1.5-flash')
 
